@@ -1,0 +1,31 @@
+{
+  "name": "ele-layout-simple",
+  "version": "1.0.0",
+  "description": "轻量级超级简单的element的layout栅格化布局",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "keywords": [
+    "element",
+    "theme",
+    "layout",
+    "css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElementUI/theme-chalk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ElementUI/theme-chalk/issues"
+  },
+  "author": "Cary",
+  "license": "MIT"
+}

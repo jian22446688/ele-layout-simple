@@ -1,0 +1,156 @@
+<!--
+ * @Description: 文件及简介
+ * @Author: Cary
+ * @Date: 2019-10-17 09:18:25
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>ele-layout-simple-dome</title>
+   <link rel="stylesheet" href="../dist/layout-simple.css">
+   <style>
+   html, body {
+     margin: 0;
+     padding: 0;
+   }
+   .demo-test {
+     height: 60px;
+     margin-top: 10px;
+   }
+   .bg-1 {
+      background-color: #bbb;
+    }
+   .bg-2 {
+      background-color: #ccc;
+    }
+   .bg-3 {
+      background-color: #ddd;
+    }
+   .content-body {
+     width: 1200px;
+     margin: 0 auto;
+     border: #eee solid 1px;
+     padding: 10px;
+     margin-top: 26px;
+     margin-bottom: 26px;
+   }
+ 
+   </style>
+ </head>
+ <body>
+   <div class="content-body">
+     <div>
+       <h2>layout-simple-demo</h2>
+       <p>在你使用了element框架时不需要使用这个框架</p>
+       <p>轻量级超级简单的element的layout栅格化布局</p>
+     </div>
+     <div title="基础布局">
+        <h3>基础布局</h3>
+        <p>使用单一分栏创建基础的栅格布局</p>
+        <div class="cc-row">
+          <div class="cc-col-24"><div class="demo-test bg-1"></div></div>
+        </div>
+        <div class="cc-row">
+          <div class="cc-col-12"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-12"><div class="demo-test bg-2"></div></div>
+        </div>
+        <div class="cc-row">
+          <div class="cc-col-8"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-8"><div class="demo-test bg-2"></div></div>
+          <div class="cc-col-8"><div class="demo-test bg-3"></div></div>
+        </div>
+        <div class="cc-row">
+          <div class="cc-col-6"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-2"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-3"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-1"></div></div>
+        </div>
+        <div class="cc-row">
+          <div class="cc-col-4"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-4"><div class="demo-test bg-2"></div></div>
+          <div class="cc-col-4"><div class="demo-test bg-3"></div></div>
+          <div class="cc-col-4"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-4"><div class="demo-test bg-2"></div></div>
+          <div class="cc-col-4"><div class="demo-test bg-3"></div></div>
+        </div>
+     </div>
+     <div title="分栏间隔">
+        <h3>分栏间隔</h3>
+        <p>分栏之间存在间隔。cc-row-gutter-20</p>
+        <div class="cc-row cc-row-gutter-20">
+          <div class="cc-col-6"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-2"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-2"></div></div>
+        </div>
+     </div>
+     <div title="混合布局">
+        <h3>混合布局</h3>
+        <p>通过基础的 1/24 分栏任意扩展组合形成较为复杂的混合布局。</p>
+        <div class="cc-row cc-row-gutter-20">
+          <div class="cc-col-16"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-8"><div class="demo-test bg-2"></div></div>
+        </div>
+        <div class="cc-row cc-row-gutter-20">
+          <div class="cc-col-8"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-8"><div class="demo-test bg-2"></div></div>
+          <div class="cc-col-4"><div class="demo-test bg-3"></div></div>
+          <div class="cc-col-4"><div class="demo-test bg-2"></div></div>
+        </div>
+        <div class="cc-row cc-row-gutter-20">
+          <div class="cc-col-4"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-16"><div class="demo-test bg-2"></div></div>
+          <div class="cc-col-4"><div class="demo-test bg-2"></div></div>
+        </div>
+     </div>
+     <div title="分栏偏移">
+        <h3>分栏偏移</h3>
+        <p>支持偏移指定的栏数。.cc-col-offset-6</p>
+        <div class="cc-row cc-row-gutter-20">
+            <div class="cc-col-6"><div class="demo-test bg-1"></div></div>
+            <div class="cc-col-6 cc-col-offset-6"><div class="demo-test bg-2"></div></div>
+          </div>
+        <div class="cc-row cc-row-gutter-20">
+          <div class="cc-col-6 cc-col-offset-6"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-6 cc-col-offset-6"><div class="demo-test bg-2"></div></div>
+        </div>
+        <div class="cc-row cc-row-gutter-20">
+          <div class="cc-col-12 cc-col-offset-6"><div class="demo-test bg-1"></div></div>
+        </div>
+     </div>
+     <div title="对齐方式">
+        <h3>对齐方式</h3>
+        <p>通过 flex 布局来对分栏进行灵活的对齐。cc-row--flex</p>
+        <p>.is-justify-center, is-justify-end, is-justify-space-between, is-justify-space-around</p>
+        <div class="cc-row cc-row-gutter-20 cc-row--flex">
+          <div class="cc-col-6"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-2"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-3"></div></div>
+        </div>
+        <div class="cc-row cc-row-gutter-20 cc-row--flex is-justify-center">
+          <div class="cc-col-6"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-2"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-3"></div></div>
+        </div>
+        <div class="cc-row cc-row-gutter-20 cc-row--flex is-justify-end">
+          <div class="cc-col-6"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-2"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-3"></div></div>
+        </div>
+        <div class="cc-row cc-row-gutter-20 cc-row--flex is-justify-space-between">
+          <div class="cc-col-6"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-2"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-3"></div></div>
+        </div>
+        <div class="cc-row cc-row-gutter-20 cc-row--flex is-justify-space-around">
+          <div class="cc-col-6"><div class="demo-test bg-1"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-2"></div></div>
+          <div class="cc-col-6"><div class="demo-test bg-3"></div></div>
+        </div>
+     </div>
+   </div>
+ </body>
+ </html>
